@@ -4,12 +4,15 @@
     "slug": "template",
     "version": "1.0.0",
     "android": {
-      "googleServicesFile": "./app/google-services.json"
+      "googleServicesFile": "./app/google-services.json",
+      "permissions": [],
+      "package": "com.template"
     },
     "ios": {
       "googleServicesFile": "./GoogleService-Info.plist"
     },
     "plugins": [
+      "@react-native-google-signin/google-signin",
       "@react-native-firebase/app",
       "@react-native-firebase/messaging",
       "@react-native-firebase/auth",
