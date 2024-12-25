@@ -1,0 +1,25 @@
+diff --git a/node_modules/react-native-parallax-scroll-view/src/index.js b/node_modules/react-native-parallax-scroll-view/src/index.js
+index 8787b6f..cfd3f2a 100644
+--- a/node_modules/react-native-parallax-scroll-view/src/index.js
++++ b/node_modules/react-native-parallax-scroll-view/src/index.js
+@@ -1,9 +1,9 @@
+ import React, { Component } from 'react'
+-import { Animated, Dimensions, View, ViewPropTypes } from 'react-native'
++import { Animated, Dimensions, View } from 'react-native'
+ 
+ const styles = require('./styles')
+ 
+-import { bool, func, number, string } from 'prop-types'
++import { bool, func, number, string, any } from 'prop-types'
+ 
+ const window = Dimensions.get('window')
+ 
+@@ -40,7 +40,7 @@ const IPropTypes = {
+ 	renderScrollComponent: func,
+ 	renderStickyHeader: func,
+ 	stickyHeaderHeight: number,
+-	contentContainerStyle: ViewPropTypes.style,
++	contentContainerStyle: any,
+ 	outputScaleValue: number
+ }
+ 

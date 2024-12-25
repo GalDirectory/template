@@ -1,37 +1,19 @@
-import { StatusBar } from "expo-status-bar";
-import React, { useEffect } from "react";
-import { StyleSheet, Text, View } from "react-native";
-import auth from "@react-native-firebase/auth";
+import React from "react";
+import { Provider } from "react-redux";
+import { createStore } from "redux";
+import AppReducer from "./src/reducers";
+import AppNavigator from "./src/navigators/AppNavigator";
 
-export default function App() {
-  useEffect(() => {
-    auth()
-      .signInAnonymously()
-      .then(() => {
-        console.log("User signed in anonymously");
-      })
-      .catch((error) => {
-        if (error.code === "auth/operation-not-allowed") {
-          console.log("Enable anonymous in your firebase console.");
-        }
+export const getStore = createStore(AppReducer);
 
-        console.error(error);
-      });
-  }, []);
-
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <Provider store={getStore}>
+        <AppNavigator />
+      </Provider>
+    );
+  }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
+export default App;
