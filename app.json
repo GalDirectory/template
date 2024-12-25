@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "template",
+    "slug": "template",
+    "version": "1.0.0",
+    "android": {
+      "googleServicesFile": "./app/google-services.json"
+    },
+    "ios": {
+      "googleServicesFile": "./GoogleService-Info.plist"
+    },
+    "plugins": [
+      "@react-native-firebase/app",
+      "@react-native-firebase/messaging",
+      "@react-native-firebase/auth",
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "useFrameworks": "static"
+          },
+          "android": {}
+        }
+      ]
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1021642213391",
+    "project_id": "template-dfda7",
+    "storage_bucket": "template-dfda7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1021642213391:android:21c8270cbed759cc8efb7a",
+        "android_client_info": {
+          "package_name": "com.template"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlRmOpFYEN34kA-C7QS-5-bowrCZUZGbA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
